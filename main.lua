@@ -1,10 +1,13 @@
-love._openConsole() -- Debug
+--love._openConsole() -- Debug
 
 local Config = require("src.Config")
 local ShooterClass = require("src.ShooterClass")
 local EnemyClass = require("src.EnemyClass")
+local ScoreCounter = require("src.ScoreCounter")
 
 -- Global variables
+_G.Score = 0
+
 _G.MouseX = 0
 _G.MouseY = 0
 
@@ -45,4 +48,6 @@ function love.draw()
     Enemy5:Draw()
 
     Shooter:Draw()
+
+    ScoreCounter:Draw()
 end

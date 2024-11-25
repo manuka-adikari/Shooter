@@ -14,6 +14,7 @@ end
 function EnemyClass:Update()
     if self.isAlive == true then
         if ShotX >= self.SpawnX and ShotX <= self.SpawnX + 20 and ShotY >= self.SpawnY and ShotY <= self.SpawnY + 20 then --Checks if the fired shot is inside the cube
+            Score = Score + 1
             self.isAlive = false
         end
     elseif self.isAlive == false then 
