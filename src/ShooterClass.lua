@@ -21,11 +21,6 @@ end
 
 function ShooterClass:Update(deltaTime)
     --Gun
-    function love.mousepressed(x, y, button) if button == 1 then 
-        if self.gunAnimation ~= self.gunShootAnimation then self.gunAnimation = self.gunShootAnimation end --Changes gun animation from idle to shoot doesnt need to change it back to idle because it pauses at the idle frame
-        self.gunAnimation:resume()
-        ShooterClass:Shoot()
-        end end
     self.gunAnimation:update(deltaTime)
 end
 

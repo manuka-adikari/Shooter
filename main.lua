@@ -1,4 +1,4 @@
---love._openConsole() -- Debug
+love._openConsole() -- Debug
 
 local Config = require("src.Config")
 local ShooterClass = require("src.ShooterClass")
@@ -50,4 +50,12 @@ function love.draw()
     Shooter:Draw()
 
     ScoreCounter:Draw()
+end
+
+function love.mousepressed(x, y, button) 
+    if button == 1 then 
+        if Shooter.gunAnimation ~= Shooter.gunShootAnimation then Shooter.gunAnimation = Shooter.gunShootAnimation end --Changes gun animation from idle to shoot doesnt need to change it back to idle because it pauses at the idle frame
+        Shooter.gunAnimation:resume()
+        Shooter:Shoot()
+    end 
 end
