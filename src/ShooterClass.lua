@@ -19,6 +19,7 @@ function ShooterClass.new()
     return self
 end
 
+
 function ShooterClass:Update(deltaTime)
     --Gun
     self.gunAnimation:update(deltaTime)

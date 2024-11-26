@@ -1,4 +1,4 @@
-love._openConsole() -- Debug
+--love._openConsole() -- Debug
 
 local Config = require("src.Config")
 local ShooterClass = require("src.ShooterClass")
@@ -33,11 +33,12 @@ end
 function love.update(deltaTime)
     MouseX, MouseY = love.mouse.getPosition()
     Shooter:Update(deltaTime)
-    Enemy1:Update()
-    Enemy2:Update()
-    Enemy3:Update()
-    Enemy4:Update()
-    Enemy5:Update()
+
+    Enemy1:Update(deltaTime)
+    Enemy2:Update(deltaTime)
+    Enemy3:Update(deltaTime)
+    Enemy4:Update(deltaTime)
+    Enemy5:Update(deltaTime)
 end
 
 function love.draw()
